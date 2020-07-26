@@ -21,7 +21,7 @@ class GetRequester
   
   def parse_json
     # we use the JSON library to parse the API response into nicely formatted JSON
-    json_data = JSON.parse(self.get_programs)
+    json_data = JSON.parse(self.get_response_body)
     json_data.collect do |data|
       data["agency"]  
     end
